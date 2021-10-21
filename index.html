@@ -1,5 +1,7 @@
 <!--#RumoAoPróximoNível-->
 <!--#Protagonistas-->
+<!--#ImaginarConstruirTransformar-->
+
 <!--
   HTML - HyperText Markup Language
     Linguagem de marcação (com Tags) de Hiper Texto (com Links)
@@ -13,6 +15,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
   </head>
 
   <body>
@@ -26,30 +29,62 @@
           <img src="images/everson.jpeg" alt="Foto pessoal">
         </div>
 
-        <h1>Everson Rezende</h1>
-        <a href="https://www.instagram.com/eversonrz/"> <img src="images/github.svg" alt="Ícone do github"> eversonrezende</a>
+        <h1 id="userName">Everson Rezende</h1>
+        <a href="https://www.github.com/eversonrezende/" target="_blank"> <img src="images/github.svg" alt="Ícone do github"> eversonrezende</a>
+
         <p>
           An student focused on learning the basics on frontend development for web
         </p>
-        <ul>
-          <li>
-            <a href="https://www.youtube.com/c/RocketSeat" target="_blank">
+
+        <ul id="socialLinks">
+          <li class="youtube">
+            <a href="https://www.youtube.com/c/jakelinygracielly" target="_blank">
             <img src="images/youtube.svg" alt="Ícone YouTube">
             </a>
           </li>
-          <li>
-            <a href="https://www.instagram.com/eversonrz" target="_blank">
+          <li class="instagram">
+            <a href="https://www.instagram.com/jakeliny.gracielly" target="_blank">
             <img src="images/instagram.svg" alt="Ícone YouTube">
             </a>
           </li>
-          <li>
-            <a href="https://www.twitter.com/everson_rz" target="_blank">
+          <li class="twitter">
+            <a href="https://www.twitter.com/jakelinytec" target="_blank">
             <img src="images/twitter.svg" alt="Ícone YouTube">
             </a>
           </li>
         </ul>
       </div>
     </main>
+
+    <script>
+      // variaveis podem ser let(permite alterar) ou const(constante)
+      
+      // DOM - Document Object Model - Documento criado pelos navegadores onde o mesmo realiza um mapeamento dos objetos do HTML e CSS do arquivo   e     cria um documento unico para que o próprio navegar consiga ler. 
+
+      // camelCase    PascalCase    snake_case
+
+      const LinksSocialMedia = {
+        github: "eversonrezende",
+        youtube: "Rocketseat",
+        instagram: "eversonrz",
+        twitter: "everson_rz"
+      }
+
+      function changeSocialMediaLinks() {
+        for (let li of socialLinks.children) {
+          const social = li.getAttribute('class')
+
+          li.children[0].href = `https://${social}.com/${LinksSocialMedia[social]}`
+
+          //alert(li.children[0].href)
+        }
+
+      }
+
+      changeSocialMediaLinks()
+
+    </script>
+
   </body>
 
 </html>
