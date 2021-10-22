@@ -11,6 +11,8 @@ body {
   --black: hsl(240, 6%, 13%);
   --grey: hsl(240, 9%, 89%);
 
+  background-color: hsl(336, 81%, 61%);
+
   height: 100%;
   font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -26,6 +28,8 @@ main {
   background: url(images/background.svg);
   width: 375px;
   height: 812px;
+
+  box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.315);
 }
 
 .container {
