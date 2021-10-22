@@ -26,14 +26,14 @@
           <span>
             <img src="images/build.svg" alt="Selo Rocketseat">
           </span>
-          <img src="images/everson.jpeg" alt="Foto pessoal">
+          <img id="userAvatar" src="images/everson.jpeg" alt="Foto pessoal">
         </div>
 
-        <h1 id="userName">Everson Rezende</h1>
-        <a href="https://www.github.com/eversonrezende/" target="_blank"> <img src="images/github.svg" alt="Ícone do github"> eversonrezende</a>
+        <h1 id="userName">Mayk Brito</h1>
+        <a id="userLink" href="https://www.github.com/maykbrito/" target="_blank"> <img src="images/github.svg" alt="Ícone do github"> <span id="userLogin">maykbrito</span></a>
 
-        <p>
-          An student focused on learning the basics on frontend development for web
+        <p id="userBio">
+          An instructor focused on helping people start programming for web - #html #css #javascript #sql #react #nodejs #fullstack
         </p>
 
         <ul id="socialLinks">
@@ -56,34 +56,7 @@
       </div>
     </main>
 
-    <script>
-      // variaveis podem ser let(permite alterar) ou const(constante)
-      
-      // DOM - Document Object Model - Documento criado pelos navegadores onde o mesmo realiza um mapeamento dos objetos do HTML e CSS do arquivo   e     cria um documento unico para que o próprio navegar consiga ler. 
-
-      // camelCase    PascalCase    snake_case
-
-      const LinksSocialMedia = {
-        github: "eversonrezende",
-        youtube: "Rocketseat",
-        instagram: "eversonrz",
-        twitter: "everson_rz"
-      }
-
-      function changeSocialMediaLinks() {
-        for (let li of socialLinks.children) {
-          const social = li.getAttribute('class')
-
-          li.children[0].href = `https://${social}.com/${LinksSocialMedia[social]}`
-
-          //alert(li.children[0].href)
-        }
-
-      }
-
-      changeSocialMediaLinks()
-
-    </script>
+    <script src="main.js"></script>
 
   </body>
 
